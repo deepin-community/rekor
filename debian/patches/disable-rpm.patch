@@ -1,0 +1,25 @@
+From f02481529b7e5bf9d3b3d944e709b5cbb9f8dd69 Mon Sep 17 00:00:00 2001
+From: Simon Josefsson <simon@josefsson.org>
+Date: Thu, 1 Feb 2024 21:26:57 +0100
+Subject: [PATCH] fix
+
+---
+ cmd/rekor-cli/app/root.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cmd/rekor-cli/app/root.go b/cmd/rekor-cli/app/root.go
+index 4dc81b7..c0bc55c 100644
+--- a/cmd/rekor-cli/app/root.go
++++ b/cmd/rekor-cli/app/root.go
+@@ -38,7 +38,7 @@ import (
+ 	_ "github.com/sigstore/rekor/pkg/types/jar/v0.0.1"
+ 	_ "github.com/sigstore/rekor/pkg/types/rekord/v0.0.1"
+ 	_ "github.com/sigstore/rekor/pkg/types/rfc3161/v0.0.1"
+-	_ "github.com/sigstore/rekor/pkg/types/rpm/v0.0.1"
++//	_ "github.com/sigstore/rekor/pkg/types/rpm/v0.0.1"
+ 	_ "github.com/sigstore/rekor/pkg/types/tuf/v0.0.1"
+ )
+ 
+-- 
+2.34.1
+
