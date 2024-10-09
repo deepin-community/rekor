@@ -1,4 +1,10 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_BUILDPKG="github.com/sigstore/rekor/cmd/rekor-cli"
+
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang --with=golang
+
+override_dh_auto_build:
+	rm -rfv _build/src/github.com/sigstore/rekor/pkg/types/rpm
+	dh_auto_build $(DH_BUILD_OPTS)
